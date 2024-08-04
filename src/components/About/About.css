@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #010115;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px;
+}
+
+.aboutpage {
+  background-color: #010115;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+  /* border-bottom: 0.01px solid rgba(236, 232, 232, 0.16); */
+  color: white;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  margin-top: 8%;
+  margin-bottom: 2%;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-left h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.about-left h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-left p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  animation: borderAnimation 2s infinite alternate;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border: 2px solid rgba(18, 32, 238, 0.1);
+  }
+  100% {
+    border: 2px solid rgba(55, 61, 238, 0.5);
+  }
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .about-left h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-left p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutpage {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-left,
+  .about-right {
+    min-width: 100%;
+    padding: 1rem;
+  }
+
+  .about-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-left p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-left h1 {
+    font-size: 1.25rem;
+  }
+  
+  .about-left p {
+    font-size: 0.9rem;
+  }
+
+  .image-container img {
+    border-radius: 5px;
+  }
+}

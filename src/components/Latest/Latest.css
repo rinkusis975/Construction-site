@@ -1,0 +1,102 @@
+body {
+  background-color: #010115; /* Darker blue background color */
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.--main {
+  background-color: #010115; /* Darker blue background color */
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.tex2{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0%;
+  color: #9a8989;
+}
+
+.bg{
+  margin: 0%;
+  background-color: rgb(0, 0, 0);
+}
+
+.Latest-card2 {
+  display: flex;
+  flex-wrap: nowrap; /* Add this to prevent wrapping to the next line */
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 6%;
+}
+
+.card2 {
+  text-align: left;
+  flex: 1; /* Add this to make the cards equal width */
+}
+
+.card2 h2 {
+  color: #010115; /* Darker blue color for contrast */
+  font-size: 3em;
+  margin: 0 0 10px 0;
+}
+
+.card2 h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #010115; /* Darker blue color for contrast */
+}
+
+.card2 p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #010115; /* Darker blue color for contrast */
+}
+
+.card2 img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px (tablets and mobiles) */
+@media only screen and (max-width: 768px) {
+  .Latest-card2 {
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 10px; /* Reduce gap between cards */
+  }
+  .card2 {
+    flex-basis: 40%; /* Make cards take up 40% of the width */
+    margin-bottom: 20px; /* Add margin between cards */
+  }
+  .card2 img {
+    width: 100%; /* Make images take up full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* For screens smaller than 480px (mobiles) */
+@media only screen and (max-width: 480px) {
+  .Latest-card2 {
+    flex-direction: column; /* Make cards stack vertically */
+  }
+  .card2 {
+    flex-basis: 100%; /* Make cards take up full width */
+    margin-bottom: 10px; /* Reduce margin between cards */
+  }
+  .card2 img {
+    width: 100%; /* Make images take up full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

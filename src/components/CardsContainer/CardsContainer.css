@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #010115;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px;
+}
+
+.main {
+  padding: 1rem;
+  background-color: #010115; /* Darker blue background color */
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent),
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+  background-size: 2px 2px; /* Smaller size of the diagonal lines */
+  text-align: center;
+  min-height: 100vh;
+  border-bottom: 0.01px solid rgba(236, 232, 232, 0.114);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+  gap: 1rem; /* Reduced gap between cards for smaller screens */
+  justify-content: center; /* Centers the cards horizontally */
+}
+
+.cc {
+  background-color: rgb(236, 243, 249);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Ensures vertical layout within the card */
+  border-radius: 0.5rem; /* Rounding the corners of the card */
+  overflow: hidden; /* Ensures the image and content fit inside the card */
+  color: #000; /* Text color */
+  max-width: 290px; /* Set a maximum width for the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+  margin: 1.5rem; /* Margin for spacing around cards */
+}
+
+.image-body {
+  width: 100%; /* Makes the image take the full width of the card */
+  height: auto;
+  display: block;
+}
+
+.tex {
+  color: #000000;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gold; */
+  border-radius: 100%;
+  width: 30px; /* Adjusted size for mobile */
+  height: 30px;
+  margin-left: 60px; /* Remove left margin for smaller screens */
+}
+
+.icon {
+  font-size: 14px; /* Adjusted icon size for mobile */
+  margin-left: 12%;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .card-body {
+    max-width: 45%; /* Adjust width for larger screens */
+  }
+
+  .container {
+    gap: 1rem; /* Adjust gap for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    max-width: 90%; /* Adjust width for tablets */
+    margin: 1rem; /* Adjust margin for tablets */
+  }
+
+  .icon-container {
+    width: 25px; /* Adjust icon size for tablets */
+    height: 25px;
+  }
+
+  .icon {
+    font-size: 12px; /* Adjust font size for tablets */
+  }
+
+  .main {
+    padding: 1rem; /* Reduced padding for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-body {
+    max-width: 100%; /* Adjust width for mobile */
+    margin: 0.5rem; /* Adjust margin for mobile */
+  }
+
+  .icon-container {
+    width: 20px; /* Adjust icon size for mobile */
+    height: 20px;
+  }
+
+  .icon {
+    font-size: 10px; /* Adjust font size for mobile */
+  }
+
+  .main {
+    padding: 0.5rem; /* Reduced padding for mobile */
+  }
+}

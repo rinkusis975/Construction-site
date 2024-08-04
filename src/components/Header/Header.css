@@ -1,0 +1,68 @@
+/* Header.css */
+.h-wrapper {
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0115;
+  display: flex;
+  background-image: linear-gradient(135deg, #0d0115 25%, transparent 25%, transparent 50%, #0a011f 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+  background-size: 2px 2px;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 1000; /* Ensure the header is above other content */
+  border-bottom: 1px solid rgba(236, 232, 232, 0.717); /* Subtle bottom lining effect */
+  /* Add a subtle box shadow for additional separation */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.h-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.h-menu a:hover {
+  color: #ccc;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 4px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .h-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #13021e;
+  }
+
+  .h-menu.open {
+    display: flex;
+  }
+
+  .h-menu a {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+
+.image {
+  margin-left: 20px;
+}
